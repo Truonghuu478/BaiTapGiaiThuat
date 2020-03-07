@@ -161,15 +161,15 @@ void themPhanTu(int arr[], int &daim, int x, int viTri)
       arr[i+1] = arr[i];
    }
    arr[viTri] = x;
-   ++daim;
+   daim++;
 }
-void themXvaoPhanTu(int arr[], int daim, int x)
+void themXvaoPhanTu(int arr[], int &daim, int x)
 {
    for (int i = 0; i < daim; i++)
    {
-      if (arr[i] % 2 != 0)
+      if (arr[i] %2 != 0)
       {
-         themPhanTu(arr, daim, x, i + 1);
+         themPhanTu(arr, daim, x,i+1);
       }
    }
 }
@@ -252,51 +252,51 @@ void xuLy(int arr[], int &daim, int chon)
    switch (chon)
    {
    case 1:
-      cout << "\nCâu 1 : \n";
+      cout << "\nCau 1 : \n";
       lietKeMVaN(arr, daim);
       break;
    case 2:
-      cout << "\nCâu 2 : \n";
+      cout << "\nCau 2 : \n";
       timGiaTriLonVaNhoNhat(arr, daim);
       break;
    case 3:
-      cout << "\nCâu 3 : \n";
+      cout << "\nCau 3 : \n";
       timSoHT(arr, daim);
       break;
    case 4:
-      cout << "\nCâu 4 : \n";
+      cout << "\nCau 4 : \n";
       TongSoNguyenTo(arr, daim);
       break;
    case 5:
-      cout << "\nCâu 5 : \n";
+      cout << "\nCau 5 : \n";
       if (kiemTraTangDan(arr, daim) == true)
       {
-         cout << "Mảng có tăng dần !!!";
+         cout << "Mang co tang dan !!!";
       }
       else
-         cout << "Mảng không tăng dần!!!";
+         cout << "Mang khong tang dan!!!";
       break;
    case 6:
-      cout << "Câu 6 : \n";
+      cout << "Cau 6 : \n";
       xoaGiaTriAm(arr, daim);
-      cout << "Mảng sau khi xóa số âm : ";
+      cout << "Mang sau khi xoa so am : ";
       xuatMang(arr, daim);
       break;
    case 7:
-      cout << "Câu 7 : \n";
+      cout << "Cau 7 : \n";
       int x;
-      cout << "nhập X : ";
+      cout << "nhap X : ";
       cin >> x;
       themXvaoPhanTu(arr, daim, x);
       xuatMang(arr, daim);
       break;
    case 8: 
-      cout<<"Câu 8 : ";
+      cout<<"Cau 8 : ";
       xapXep(arr,daim);
       xuatMang(arr,daim);
       break;
    case 9:
-      cout<<"Câu 9 : ";
+      cout<<"Cau 9 : ";
       xoaTrung(arr,daim);
       xuatMang(arr,daim);
    default:
